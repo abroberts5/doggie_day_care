@@ -6,14 +6,15 @@ class Dog
   def initialize(name, breed)
     @name         = name
     @breed        = breed
-    @feed         = false
+    @feed         = 0
   end
 
   def fed?
-    @feed
+    @feed >= 1
   end
 
   def feed
-    "Yum!"
+    @feed += 1
+    p "Yum!"
   end
 end
